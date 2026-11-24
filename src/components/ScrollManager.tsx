@@ -1,0 +1,43 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ROUTE_TITLES: Record<string, string> = {
+  '/': 'ArGo | CFO Office, Audit, Budgeting and Fund Raising',
+  '/about': 'About Us — Our Story, Partners & Values | ArGo',
+  '/services': 'Services, Sectors & Tools | ArGo',
+  '/careers': 'Careers in Emerging Cities | ArGo',
+  '/contact': 'Contact Us | ArGo',
+};
+
+export function ScrollManager() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    document.title = ROUTE_TITLES[pathname] ?? ROUTE_TITLES['/'];
+
+    if (hash) {
+      const targetId = hash.replace('#', '');
+      let attempts = 0;
+      let timerId = 0;
+
+      const tryScroll = () => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+        attempts += 1;
+        if (attempts < 20) {
+          timerId = window.setTimeout(tryScroll, 50);
+        }
+      };
+
+      timerId = window.setTimeout(tryScroll, 60);
+      return () => window.clearTimeout(timerId);
+    }
+
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [pathname, hash]);
+
+  return null;
+}
