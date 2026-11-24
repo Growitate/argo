@@ -100,7 +100,9 @@ export interface PartnerItem {
   email: string;
   bioParagraphs: string[];
   image: string;
+  mobileImage?: string;
   imageAlt: string;
+  isPlaceholder?: boolean;
 }
 
 export interface LocationPin {
@@ -561,6 +563,7 @@ export const PARTNERS: PartnerItem[] = [
     image:
       'https://images.unsplash.com/photo-1649433658557-54cf58577c68?auto=format&fit=crop&w=800&q=85',
     imageAlt: 'Portrait of Arpit Agrawal, Partner at ArGo',
+    isPlaceholder: true,
   },
   {
     id: 'ca-gopesh-dawda',
@@ -576,10 +579,10 @@ export const PARTNERS: PartnerItem[] = [
       'His association with Accenture in an SAP implementation role provided him with an understanding of enterprise systems, business processes and the role of technology in transforming finance functions. This was complemented by his experience at Vertis Infrastructure Trust, where he gained a deeper understanding of financial strategy and management, particularly in areas such as business valuations, treasury, debt raising, annual operating plans and financial reporting.',
       'At ArGo, Gopesh brings this combination of financial and technological understanding to help businesses build stronger finance functions, improve financial visibility and make informed business decisions. He is particularly focused on bridging the gap between financial information, business strategy and effective execution.',
     ],
-    // REPLACE with client photography
-    image:
-      'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85',
+    image: '/images/DSC00943.JPG%20(1.1).jpeg',
+    mobileImage: '/images/DSC00944.JPG%20(2).jpeg',
     imageAlt: 'Portrait of Gopesh Dawda, Partner at ArGo',
+    isPlaceholder: false,
   },
 ];
 

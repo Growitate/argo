@@ -19,14 +19,25 @@ export function Partners() {
           <Reveal key={partner.id} delay={idx * 0.12}>
             <article className="group flex h-full flex-col justify-between rounded-card bg-surface p-6 transition-all duration-250 ease-argo hover:-translate-y-1.5 hover:shadow-card sm:p-7">
               <div>
-                {/* Aspect 4/5 portrait placeholder (greyscale to colour on hover) */}
-                <div className="aspect-[4/5] w-full overflow-hidden rounded-[20px] bg-surface-2">
-                  <img
-                    src={partner.image}
-                    alt={partner.imageAlt}
-                    loading="lazy"
-                    className="h-full w-full object-cover object-top grayscale transition-all duration-500 ease-argo group-hover:scale-[1.03] group-hover:grayscale-0"
-                  />
+                {/* Responsive portrait (desktop) / landscape (mobile) */}
+                <div
+                  className={`${
+                    partner.mobileImage ? 'aspect-[3/2] md:aspect-[4/5]' : 'aspect-[4/5]'
+                  } w-full overflow-hidden rounded-[20px] bg-surface-2`}
+                >
+                  <picture>
+                    {partner.mobileImage && (
+                      <source media="(max-width: 767px)" srcSet={partner.mobileImage} />
+                    )}
+                    <img
+                      src={partner.image}
+                      alt={partner.imageAlt}
+                      loading="lazy"
+                      className={`h-full w-full object-cover object-top transition-all duration-500 ease-argo group-hover:scale-[1.03] ${
+                        partner.isPlaceholder ? 'grayscale group-hover:grayscale-0' : ''
+                      }`}
+                    />
+                  </picture>
                 </div>
 
                 <div className="mt-6 flex items-start justify-between gap-4">
