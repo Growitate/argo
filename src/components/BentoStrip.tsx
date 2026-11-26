@@ -28,7 +28,7 @@ export function BentoStrip() {
             <Reveal
               key={card.id}
               delay={index * 0.12}
-              className={responsiveOrderClass}
+              className={`${responsiveOrderClass} h-full`.trim()}
             >
               <BentoCard item={card} />
             </Reveal>

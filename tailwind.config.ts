@@ -5,14 +5,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: 'var(--bg)',
-        surface: 'var(--surface)',
-        'surface-2': 'var(--surface-2)',
-        ink: 'var(--ink)',
-        'ink-soft': 'var(--ink-soft)',
-        accent: 'var(--accent)',
-        'accent-deep': 'var(--accent-deep)',
-        'on-accent': 'var(--on-accent)',
+        bg: 'rgb(var(--bg-rgb) / <alpha-value>)',
+        surface: 'rgb(var(--surface-rgb) / <alpha-value>)',
+        'surface-2': 'rgb(var(--surface-2-rgb) / <alpha-value>)',
+        ink: 'rgb(var(--ink-rgb) / <alpha-value>)',
+        'ink-soft': 'rgb(var(--ink-soft-rgb) / <alpha-value>)',
+        accent: 'rgb(var(--accent-rgb) / <alpha-value>)',
+        'accent-deep': 'rgb(var(--accent-deep-rgb) / <alpha-value>)',
+        'on-accent': 'rgb(var(--on-accent-rgb) / <alpha-value>)',
         hairline: 'var(--hairline)',
       },
       borderRadius: {

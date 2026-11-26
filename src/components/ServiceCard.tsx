@@ -1,5 +1,6 @@
 import {
   BookOpenCheck,
+  BriefcaseBusiness,
   Calculator,
   FileSpreadsheet,
   Handshake,
@@ -12,6 +13,7 @@ import { ArrowButton } from './ArrowButton';
 
 const ICON_MAP: Record<ServiceIconName, typeof Handshake> = {
   Handshake,
+  BriefcaseBusiness,
   PieChart,
   Landmark,
   BookOpenCheck,
@@ -33,7 +35,7 @@ export function ServiceCard({ service, onSelect }: ServiceCardProps) {
       type="button"
       onClick={() => onSelect(service)}
       aria-label={`Explore ${service.title}`}
-      className="service-card group relative flex aspect-[3/4.2] w-full flex-col justify-between overflow-hidden rounded-card bg-ink text-left transition-transform duration-300 ease-argo hover:-translate-y-1.5 hover:shadow-card active:scale-[0.99]"
+      className="service-card group relative flex h-60 w-full flex-col justify-between overflow-hidden rounded-card bg-ink text-left transition-transform duration-300 ease-argo hover:-translate-y-1.5 hover:shadow-card active:scale-[0.99] sm:h-80 lg:h-[340px]"
     >
       {/* Full-bleed photography */}
       <img

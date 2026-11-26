@@ -16,10 +16,10 @@ export function BentoCard({ item }: BentoCardProps) {
     return (
       <Link
         to={item.href}
-        className="group relative flex min-h-[360px] flex-col justify-between overflow-hidden rounded-card bg-accent text-on-accent transition-all duration-250 ease-argo hover:-translate-y-1.5 hover:shadow-card lg:min-h-[388px]"
+        className="group relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-card bg-accent text-on-accent transition-all duration-250 ease-argo hover:-translate-y-1.5 hover:shadow-card sm:min-h-[360px] lg:min-h-[388px]"
       >
         {/* Top ~62% photo masked with organic rounded asterisk SVG clipPath */}
-        <div className="relative h-[248px] w-full shrink-0 overflow-hidden sm:h-[264px]">
+        <div className="relative h-[210px] w-full shrink-0 overflow-hidden sm:h-[248px] md:h-[264px]">
           <div
             className="h-full w-full overflow-hidden"
             style={{ clipPath: `url(#${ASTERISK_CLIP_PATH_ID})` }}
@@ -34,7 +34,7 @@ export function BentoCard({ item }: BentoCardProps) {
         </div>
 
         {/* Bottom content area */}
-        <div className="flex flex-1 flex-col justify-end p-6 pt-3">
+        <div className="flex flex-1 flex-col justify-end p-5 pt-2 sm:p-6 sm:pt-3">
           {item.title ? (
             <>
               <div>
@@ -61,7 +61,7 @@ export function BentoCard({ item }: BentoCardProps) {
   return (
     <Link
       to={item.href}
-      className="group flex min-h-[340px] flex-col justify-between rounded-card bg-surface p-6 transition-all duration-250 ease-argo hover:-translate-y-1.5 hover:bg-surface-2/80 hover:shadow-card lg:min-h-[360px]"
+      className="group flex h-full min-h-[290px] flex-col justify-between rounded-card bg-surface p-5 transition-all duration-250 ease-argo hover:-translate-y-1.5 hover:bg-surface-2/80 hover:shadow-card sm:min-h-[340px] sm:p-6 lg:min-h-[360px]"
     >
       <div>
         <div className="flex items-center justify-between gap-3">

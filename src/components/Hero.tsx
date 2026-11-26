@@ -53,7 +53,7 @@ export function Hero() {
           setIsPaused(false);
         }
       }}
-      className="relative flex min-h-[600px] flex-col justify-between overflow-hidden rounded-[20px] bg-ink md:min-h-[min(88vh,760px)] md:rounded-[28px]"
+      className="relative flex min-h-[540px] flex-col justify-between overflow-hidden rounded-[20px] bg-ink sm:min-h-[600px] md:min-h-[min(88vh,760px)] md:rounded-[28px]"
     >
       {/* Floating Navbar inside hero */}
       <Navbar />
@@ -103,13 +103,13 @@ export function Hero() {
       </motion.div>
 
       {/* Main foreground content */}
-      <div className="relative z-10 flex flex-1 flex-col justify-end px-5 pb-4 pt-28 sm:px-8 md:justify-center md:px-12 md:pt-32 lg:px-16">
+      <div className="relative z-10 flex flex-1 flex-col justify-end px-4 pb-4 pt-24 sm:px-8 sm:pt-28 md:justify-center md:px-12 md:pt-32 lg:px-16">
         <div className="flex items-center justify-between gap-8">
           <div
             id="hero-slide-panel"
             role="tabpanel"
             aria-labelledby={`hero-tab-${activeSlide.id}`}
-            className="max-w-[820px]"
+            className="w-full max-w-[820px]"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -121,7 +121,7 @@ export function Hero() {
               >
                 <h1
                   id="hero-heading"
-                  className="text-[clamp(2.5rem,5.2vw,4.75rem)] font-light leading-[1.12] tracking-[-0.02em] text-[#F7F5F0]"
+                  className="text-[clamp(2rem,5.2vw,4.75rem)] font-light leading-[1.12] tracking-[-0.02em] text-[#F7F5F0]"
                 >
                   <span className="block overflow-hidden pb-[0.22em] -mb-[0.22em]">
                     <motion.span
@@ -175,7 +175,7 @@ export function Hero() {
                       delay: prefersReducedMotion ? 0 : 0.16,
                       ease: ARGO_EASE,
                     }}
-                    className="mt-5 max-w-[46ch] text-justify text-[0.9375rem] font-normal leading-[1.6] text-white/85 sm:text-[1.0625rem]"
+                    className="mt-5 max-w-[46ch] text-left text-[0.9375rem] font-normal leading-[1.6] text-white/85 sm:text-justify sm:text-[1.0625rem]"
                   >
                     {activeSlide.supporting}
                   </motion.p>
@@ -183,18 +183,18 @@ export function Hero() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Primary CTA group: Lime pill + 8px gap + 52px lime circle */}
-            <div className="mt-7 flex items-center">
+            {/* Primary CTA group: Lime pill + 8px gap + circle arrow */}
+            <div className="mt-6 flex items-center sm:mt-7">
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 active:scale-[0.98]"
+                className="group inline-flex max-w-full items-center gap-2 active:scale-[0.98]"
               >
-                <span className="inline-flex h-[52px] items-center rounded-full bg-accent px-7 text-[0.9375rem] font-medium text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep">
+                <span className="inline-flex h-12 items-center rounded-full bg-accent px-5 text-[0.875rem] font-medium text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep sm:h-[52px] sm:px-7 sm:text-[0.9375rem]">
                   {SITE_META.heroCtaLabel}
                 </span>
                 <span
                   aria-hidden="true"
-                  className="inline-flex h-[52px] w-[52px] items-center justify-center rounded-full bg-accent text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep"
+                  className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep sm:h-[52px] sm:w-[52px]"
                 >
                   <ArrowUpRight
                     className="h-5 w-5 transition-transform duration-300 ease-argo group-hover:rotate-45"

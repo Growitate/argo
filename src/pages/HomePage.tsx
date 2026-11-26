@@ -17,11 +17,11 @@ export function HomePage() {
         {/* Closing CTA routing to Contact Us */}
         <section
           aria-label="Connect with ArGo"
-          className="mt-4 rounded-card bg-ink p-8 text-white sm:p-12 md:mt-6 md:rounded-panel lg:p-16"
+          className="mt-4 rounded-card bg-ink p-6 text-white sm:p-10 md:mt-6 md:rounded-panel md:p-12 lg:p-16"
         >
-          <Reveal className="mx-auto flex max-w-[1280px] flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+          <Reveal className="mx-auto flex max-w-[1280px] flex-col items-start justify-between gap-6 sm:gap-8 lg:flex-row lg:items-center">
             <div className="max-w-[640px]">
-              <h2 className="text-[clamp(1.85rem,3.4vw,3rem)] font-normal leading-[1.12] tracking-[-0.015em] text-[#F7F5F0]">
+              <h2 className="text-[clamp(1.65rem,3.4vw,3rem)] font-normal leading-[1.12] tracking-[-0.015em] text-[#F7F5F0]">
                 Ready to Strengthen Your CFO Office?
               </h2>
             </div>

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ROUTE_TITLES: Record<string, string> = {
-  '/': 'ArGo | CFO Office, Audit, Budgeting and Fund Raising',
+  '/': 'ArGo | Your Business Partner',
   '/about': 'About Us — Our Story, Partners & Values | ArGo',
   '/services': 'Services, Sectors & Tools | ArGo',
   '/careers': 'Careers in Emerging Cities | ArGo',
@@ -16,6 +16,7 @@ export function ScrollManager() {
     document.title = ROUTE_TITLES[pathname] ?? ROUTE_TITLES['/'];
 
     if (hash) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
       const targetId = hash.replace('#', '');
       let attempts = 0;
       let timerId = 0;
@@ -23,16 +24,16 @@ export function ScrollManager() {
       const tryScroll = () => {
         const el = document.getElementById(targetId);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
           return;
         }
         attempts += 1;
-        if (attempts < 20) {
+        if (attempts < 25) {
           timerId = window.setTimeout(tryScroll, 50);
         }
       };
 
-      timerId = window.setTimeout(tryScroll, 60);
+      timerId = window.setTimeout(tryScroll, 80);
       return () => window.clearTimeout(timerId);
     }
 

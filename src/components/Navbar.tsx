@@ -94,12 +94,12 @@ export function Navbar() {
   const showScrolledNav = isScrolled && !isFooterReached;
 
   const navClasses = isScrolled
-    ? `fixed top-3 left-3 right-3 lg:top-4 lg:left-5 lg:right-5 mx-auto max-w-[1400px] rounded-full bg-white/80 backdrop-blur-[16px] border border-hairline shadow-card px-4 py-2 lg:px-6 lg:py-2.5 z-50 transition-all duration-300 ease-argo ${
+    ? `fixed top-2.5 left-2.5 right-2.5 sm:top-3 sm:left-3 sm:right-3 lg:top-4 lg:left-5 lg:right-5 mx-auto max-w-[1400px] rounded-full bg-white/90 backdrop-blur-[16px] border border-hairline shadow-card px-3.5 py-2 sm:px-4 lg:px-6 lg:py-2.5 z-50 transition-all duration-300 ease-argo ${
         isFooterReached
           ? 'invisible pointer-events-none -translate-y-6 opacity-0'
           : 'visible translate-y-0 opacity-100'
       }`
-    : 'absolute top-4 left-4 right-4 lg:top-5 lg:left-8 lg:right-8 z-50';
+    : 'absolute top-3.5 left-3.5 right-3.5 sm:top-4 sm:left-4 sm:right-4 lg:top-5 lg:left-8 lg:right-8 z-50';
 
   return (
     <>
@@ -147,13 +147,13 @@ export function Navbar() {
                   <li key={link.id}>
                     <Link
                       to={link.to}
-                      className={`relative inline-flex min-h-[44px] items-center text-[0.75rem] font-medium transition-all duration-200 ease-argo hover:-translate-y-[1px] xl:text-[0.8125rem] ${
+                      className={`relative inline-flex min-h-[44px] items-center text-[0.8125rem] font-medium transition-all duration-200 ease-argo hover:-translate-y-[1px] xl:text-[0.875rem] ${
                         isScrolled
                           ? isActive
-                            ? 'text-ink'
-                            : 'text-ink/80 hover:text-ink'
+                            ? 'text-ink font-semibold'
+                            : 'text-ink/85 hover:text-ink'
                           : isActive
-                            ? 'text-white'
+                            ? 'text-white font-semibold'
                             : 'text-white/85 hover:text-white'
                       }`}
                     >
@@ -239,10 +239,10 @@ export function Navbar() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: prefersReducedMotion ? 0 : '100%', opacity: prefersReducedMotion ? 0 : 1 }}
               transition={{ duration: prefersReducedMotion ? 0.2 : 0.38, ease: ARGO_EASE }}
-              className="fixed right-0 top-0 flex h-full w-[88%] max-w-sm flex-col justify-between overflow-y-auto bg-ink p-6 text-white shadow-2xl"
+              className="fixed right-0 top-0 flex h-full w-[88%] max-w-sm flex-col justify-between overflow-y-auto bg-ink p-5 text-white shadow-2xl sm:p-6"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-5">
+                <div className="flex items-center justify-between border-b border-white/10 pb-4 sm:pb-5">
                   <LogoMark tone="light" />
                   <button
                     ref={closeButtonRef}
@@ -255,7 +255,7 @@ export function Navbar() {
                   </button>
                 </div>
 
-                <ul className="mt-8 space-y-2">
+                <ul className="mt-5 space-y-2 sm:mt-8">
                   {NAV_LINKS.map((link, index) => {
                     const isActive = isNavItemActive(link.id, link.to);
                     return (

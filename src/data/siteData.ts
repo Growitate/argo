@@ -1,5 +1,6 @@
 export type ServiceIconName =
   | 'Handshake'
+  | 'BriefcaseBusiness'
   | 'PieChart'
   | 'Landmark'
   | 'BookOpenCheck'
@@ -60,6 +61,8 @@ export interface SectorItem {
   id: string;
   title: string;
   icon: SectorIconName;
+  image: string;
+  imageAlt: string;
 }
 
 export interface ToolItem {
@@ -102,6 +105,8 @@ export interface PartnerItem {
   image: string;
   mobileImage?: string;
   imageAlt: string;
+  imagePositionClass?: string;
+  imageWrapperClass?: string;
   isPlaceholder?: boolean;
 }
 
@@ -225,7 +230,6 @@ export const BENTO_CARDS: BentoItem[] = [
 
 export const BUSINESS_OVERVIEW = {
   aboutBusiness: {
-    pill: 'OUR FIRM',
     heading: 'Integrated Solutions Across the CFO Office',
     paragraphs: [
       'ArGo is a professional services and consulting firm providing integrated solutions across the CFO Office.',
@@ -235,7 +239,6 @@ export const BUSINESS_OVERVIEW = {
     ],
   },
   problemWeSolve: {
-    pill: 'THE CHALLENGE WE SIMPLIFY',
     heading: 'Turning Operational Complexity Into Control',
     paragraphs: [
       'Businesses often face challenges in managing complex financial operations, maintaining accurate financial records, meeting regulatory and compliance requirements, and establishing effective internal controls.',
@@ -252,6 +255,49 @@ export const SERVICES_HEADER = {
 };
 
 export const SERVICES: ServiceItem[] = [
+  {
+    id: 'fund-raising-refinancing',
+    title: 'Fund Raising / Refinancing',
+    icon: 'Landmark',
+    shortDescription:
+      'Debt and equity readiness, lender documentation, financial models.',
+    fullDescription:
+      'End-to-end financial readiness for growing enterprises raising working capital, project debt or growth equity. We prepare bank-grade financial models and structured disclosures that withstand lender and investor scrutiny.',
+    deliverables: [
+      'Debt and equity capital readiness assessment',
+      'Three-statement financial models and sensitivity cases',
+      'Information memoranda and lender documentation',
+      'CMA data preparation and post-sanction reporting support',
+    ],
+    // REPLACE with client photography
+    image:
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85',
+    imageAlt:
+      'Modern financial district towers representing corporate capital and refinancing advisory',
+  },
+  {
+    id: 'mergers-acquisitions',
+    title: 'Mergers & Acquisitions',
+    icon: 'BriefcaseBusiness',
+    shortDescription:
+      'M&A strategy, buy/sell-side advisory, financial due diligence, valuation and post-merger integration.',
+    fullDescription:
+      'We provide strategic and financial support across the M&A lifecycle, assisting businesses, promoters and investors in evaluating, structuring and executing transactions. From assessing potential opportunities and analysing financial performance to transaction structuring, due diligence and post-deal integration, we help stakeholders navigate complex transactions with informed decision-making, financial clarity and a focus on value creation.',
+    deliverables: [
+      'M&A strategy and transaction advisory',
+      'Buy-side and sell-side advisory support',
+      'Financial due diligence and transaction analysis',
+      'Business valuation and deal structuring',
+      'Financial modelling and deal evaluation',
+      'Negotiation and transaction support',
+      'Post-merger integration and financial restructuring',
+    ],
+    // REPLACE with client photography
+    image:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=85',
+    imageAlt:
+      'Advisory partners and executives collaborating on mergers and acquisitions deal strategy',
+  },
   {
     id: 'handover-takeover',
     title: 'Handover/Takeover',
@@ -293,26 +339,6 @@ export const SERVICES: ServiceItem[] = [
       'Financial planning and MIS performance charts displayed on an executive laptop',
   },
   {
-    id: 'fund-raising-refinancing',
-    title: 'Fund Raising / Refinancing',
-    icon: 'Landmark',
-    shortDescription:
-      'Debt and equity readiness, lender documentation, financial models.',
-    fullDescription:
-      'End-to-end financial readiness for growing enterprises raising working capital, project debt or growth equity. We prepare bank-grade financial models and structured disclosures that withstand lender and investor scrutiny.',
-    deliverables: [
-      'Debt and equity capital readiness assessment',
-      'Three-statement financial models and sensitivity cases',
-      'Information memoranda and lender documentation',
-      'CMA data preparation and post-sanction reporting support',
-    ],
-    // REPLACE with client photography
-    image:
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85',
-    imageAlt:
-      'Modern financial district towers representing corporate capital and refinancing advisory',
-  },
-  {
     id: 'accounting-accounts-payable',
     title: 'Accounting & Accounts Payable',
     icon: 'BookOpenCheck',
@@ -347,9 +373,9 @@ export const SERVICES: ServiceItem[] = [
     ],
     // REPLACE with client photography
     image:
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1707157284454-553ef0a4ed0d?auto=format&fit=crop&w=900&q=85',
     imageAlt:
-      'Financial records, statutory schedules and reporting review desk',
+      'Financial charts, analytical reports, notebook and laptop on an audit desk',
   },
   {
     id: 'taxation-direct-indirect',
@@ -367,9 +393,9 @@ export const SERVICES: ServiceItem[] = [
     ],
     // REPLACE with client photography
     image:
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=85',
     imageAlt:
-      'Finance professionals reviewing tax compliance and statutory workflows',
+      'Tax return forms, calculator and statutory compliance schedules',
   },
   {
     id: 'certifications-attestations',
@@ -386,36 +412,69 @@ export const SERVICES: ServiceItem[] = [
     ],
     // REPLACE with client photography
     image:
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1709318158189-9916f0d392d1?auto=format&fit=crop&w=900&q=85',
     imageAlt:
-      'Advisory team collaborating on statutory certification and attestation engagements',
+      'Partner reviewing and signing a stamped statutory certification document',
   },
 ];
 
 export const SECTORS: SectorItem[] = [
-  { id: 'manufacturing', title: 'Manufacturing', icon: 'Factory' },
+  {
+    id: 'manufacturing',
+    title: 'Manufacturing',
+    icon: 'Factory',
+    image:
+      'https://images.unsplash.com/photo-1566930665082-4ae9dbbb5b6b?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Industrial manufacturing assembly floor and production facility',
+  },
   {
     id: 'real-estate-infrastructure',
     title: 'Real Estate & Infrastructure',
     icon: 'Building2',
+    image:
+      'https://images.unsplash.com/photo-1595006986810-5f41da30a9ec?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Modern commercial skyscrapers and urban infrastructure skyline',
   },
   {
     id: 'consumer-distribution',
     title: 'Consumer & Distribution',
     icon: 'ShoppingBag',
+    image:
+      'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Retail point-of-sale counter serving consumer customers',
   },
   {
     id: 'pharmaceuticals-healthcare',
     title: 'Pharmaceuticals & Healthcare',
     icon: 'HeartPulse',
+    image:
+      'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Pharmaceutical laboratory glassware and research environment',
   },
-  { id: 'energy-renewables', title: 'Energy & Renewables', icon: 'Zap' },
+  {
+    id: 'energy-renewables',
+    title: 'Energy & Renewables',
+    icon: 'Zap',
+    image:
+      'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Rows of solar photovoltaic panels generating clean renewable energy',
+  },
   {
     id: 'trading-commodities',
     title: 'Trading & Commodities',
     icon: 'TrendingUp',
+    image:
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Organised distribution warehouse inventory and trading logistics',
   },
-  { id: 'aviation', title: 'Aviation', icon: 'Plane' },
+  {
+    id: 'aviation',
+    title: 'Aviation',
+    icon: 'Plane',
+    image:
+      'https://images.unsplash.com/photo-1572204443441-3859041b6c88?auto=format&fit=crop&w=900&q=85',
+    imageAlt: 'Commercial aircraft wing viewed above clouds during flight',
+  },
 ];
 
 export const HANDS_ON_TOOLS: ToolItem[] = [
@@ -460,7 +519,7 @@ export const STATS: StatItem[] = [
   },
   {
     id: 'industry-exposure',
-    numericTarget: 10,
+    numericTarget: 7,
     suffix: '+',
     label: 'Industry Exposure',
     isPlaceholder: false,
@@ -492,23 +551,15 @@ export const ABOUT_CONTENT = {
     'We saw an opportunity to bridge this gap by building a professional services firm that brings quality work and meaningful career opportunities closer to home. Our vision was to establish our primary operational and delivery base in a Tier 2 city, while extending our presence to major business centres through a team positioned closer to our clients.',
     'This approach allows us to combine the advantages of a strong talent base in emerging cities with the accessibility, responsiveness and client proximity of a metropolitan presence. At ArGo, we believe that great talent is not confined by geography, and quality professional services need not be delivered exclusively from metropolitan centres. Our operating model reflects this belief — creating opportunities where talent exists, while serving businesses wherever they operate.',
   ],
-  closingHighlight:
-    'Rooted in emerging cities. Present where business happens. Delivering without boundaries.',
-  badgeText: 'Tier 2 delivery base, metro client proximity',
-  // REPLACE with client photography
-  image:
-    'https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1100&q=80',
+  image: '/WhatsApp%20Image%202026-11-26%20at%2010.50.09%20AM.jpeg',
   imageAlt:
-    'Advisory discussion in a bright metro conference room overlooking the city',
+    'Two finance advisors collaborating over a laptop in a modern office meeting room',
 };
 
 export const WHY_ARGO_CONTENT = {
-  pill: 'WHY CHOOSE US',
   heading: 'Why Choose ArGo',
   intro:
     'At ArGo, we believe that effective professional services go beyond technical knowledge — they require a thorough understanding of business needs, practical insights and a commitment to delivering meaningful outcomes.',
-  differentiatorQuote:
-    'Our differentiator is simple: the depth of professional expertise, the perspective of business experience and the personal attention of a partner-led firm.',
   items: [
     {
       id: 'depth-of-expertise',
@@ -559,11 +610,9 @@ export const PARTNERS: PartnerItem[] = [
       'He subsequently spent over four years with Vertis Infrastructure Trust (A KKR backed platform), where he developed extensive experience in financial reporting, audit and assurance, taxation and regulatory matters. His work encompassed financial reporting, handling audits with Big Four firms, direct and indirect tax compliance and assessments, financial and tax modelling, and SEBI-related matters, including inspections.',
       'At ArGo, Arpit brings together his experience across diverse industries and complex financial environments to help businesses strengthen financial governance, enhance reporting quality, manage regulatory requirements and establish robust financial processes. He believes in combining technical rigour with practical business understanding to deliver meaningful outcomes for clients.',
     ],
-    // REPLACE with client photography
-    image:
-      'https://images.unsplash.com/photo-1649433658557-54cf58577c68?auto=format&fit=crop&w=800&q=85',
+    image: '/images/WhatsApp%20Image%202026-11-25%20at%209.11.50%20AM.jpeg',
     imageAlt: 'Portrait of Arpit Agrawal, Partner at ArGo',
-    isPlaceholder: true,
+    isPlaceholder: false,
   },
   {
     id: 'ca-gopesh-dawda',
@@ -576,12 +625,12 @@ export const PARTNERS: PartnerItem[] = [
     bioParagraphs: [
       'Gopesh brings a blend of financial management, strategic planning and technology-driven process understanding. With over 5 years of post-qualification experience, he has developed a strong understanding of how finance functions operate, support business strategy and contribute to organizational growth.',
       'His professional experience spans financial planning and budgeting, treasury management, business valuations, debt fundraising and management reporting. Having worked across both enterprise technology implementation and complex financial management environments, he brings a perspective that connects financial strategy with operational execution.',
-      'His association with Accenture in an SAP implementation role provided him with an understanding of enterprise systems, business processes and the role of technology in transforming finance functions. This was complemented by his experience at Vertis Infrastructure Trust, where he gained a deeper understanding of financial strategy and management, particularly in areas such as business valuations, treasury, debt raising, annual operating plans and financial reporting.',
+      'His association with Accenture in an SAP implementation role provided him with an understanding of enterprise systems, business processes and the role of technology in transforming finance functions. This was complemented by his experience at Vertis Infrastructure Trust (A KKR backed platform), where he gained a deeper understanding of financial strategy and management, particularly in areas such as business valuations, treasury, debt raising, annual operating plans and financial reporting.',
       'At ArGo, Gopesh brings this combination of financial and technological understanding to help businesses build stronger finance functions, improve financial visibility and make informed business decisions. He is particularly focused on bridging the gap between financial information, business strategy and effective execution.',
     ],
-    image: '/images/DSC00943.JPG%20(1.1).jpeg',
-    mobileImage: '/images/DSC00944.JPG%20(2).jpeg',
+    image: '/Gopesh%20Dawda%20Profile%20pic%20(1).png',
     imageAlt: 'Portrait of Gopesh Dawda, Partner at ArGo',
+    imagePositionClass: 'object-center',
     isPlaceholder: false,
   },
 ];
@@ -627,12 +676,12 @@ export const CONTACT_CONTENT = {
   addresses: [
     'M-6, First Floor, Opp. Post Office, Shahu Market Yard, Kolhapur – 416005, Maharashtra',
     'Innov8 House, Gufic Building, Vile Parle (E), Subhash Road, Mumbai – 400057, Maharashtra',
-    'Plot No.12, Pachundenagar, near Sai Pay Parking, Haripur Road, Sangli-416416',
   ],
   serviceOptions: [
+    'Fund Raising / Refinancing',
+    'Mergers & Acquisitions',
     'Handover/Takeover',
     'Annual Budgeting',
-    'Fund Raising / Refinancing',
     'Accounting & Accounts Payable',
     'Financial Reporting & Audit',
     'Taxation (Direct & Indirect Tax)',

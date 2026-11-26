@@ -29,7 +29,7 @@ export function Locations() {
       <div className="mt-10 grid grid-cols-1 items-center gap-8 md:mt-12 lg:grid-cols-12 lg:gap-10">
         {/* Stylised dotted India SVG map */}
         <Reveal className="lg:col-span-7">
-          <div className="relative overflow-hidden rounded-card bg-surface p-6 sm:p-8">
+          <div className="relative overflow-hidden rounded-card bg-surface p-5 sm:p-8">
             <div className="mx-auto max-w-[440px]">
               <svg
                 viewBox="0 0 500 560"
@@ -109,7 +109,7 @@ export function Locations() {
             </div>
 
             {/* Compact map legend bar */}
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-6 border-t border-hairline pt-4 text-[0.8125rem] text-ink">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 border-t border-hairline pt-4 text-[0.8125rem] text-ink sm:gap-6">
               <span className="inline-flex items-center gap-2 font-medium">
                 <span
                   aria-hidden="true"

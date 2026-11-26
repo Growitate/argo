@@ -7,6 +7,7 @@ interface FormSuccessViewProps {
   title: string;
   description: string;
   selectionHighlight: string;
+  emailConnector?: string;
   recipientEmail: string;
   mailtoUrl: string | null;
   resetLabel: string;
@@ -17,6 +18,7 @@ export function FormSuccessView({
   title,
   description,
   selectionHighlight,
+  emailConnector,
   recipientEmail,
   mailtoUrl,
   resetLabel,
@@ -39,7 +41,14 @@ export function FormSuccessView({
       <p className="mt-2 max-w-[46ch] text-[0.9375rem] leading-[1.6] text-ink-soft">
         {description}{' '}
         <span className="font-medium text-ink">{selectionHighlight}</span>{' '}
-        ({recipientEmail}).
+        {emailConnector ? (
+          <>
+            {emailConnector}{' '}
+            <span className="font-medium text-ink">{recipientEmail}</span>
+          </>
+        ) : (
+          `(${recipientEmail}).`
+        )}
       </p>
 
       {mailtoUrl && (
@@ -48,7 +57,7 @@ export function FormSuccessView({
           className="mt-6 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-accent px-6 text-[0.9375rem] font-medium text-on-accent transition-colors hover:bg-accent-deep"
         >
           <Mail className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
-          <span>Open Email Client Again</span>
+          <span>Open Email Draft</span>
         </a>
       )}
 

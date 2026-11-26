@@ -40,13 +40,13 @@ export function PageHero({
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(183,229,44,0.14),transparent_52%)]"
       />
 
-      <div className="relative z-10 px-5 pb-12 pt-28 sm:px-8 md:px-12 md:pb-16 md:pt-36 lg:px-16 lg:pb-20">
+      <div className="relative z-10 px-5 pb-10 pt-24 sm:px-8 sm:pb-12 sm:pt-28 md:px-12 md:pb-16 md:pt-36 lg:px-16 lg:pb-20">
         <div className={Array.isArray(description) ? 'max-w-[960px]' : 'max-w-[820px]'}>
           {pill && <Pill variant="on-dark">{pill}</Pill>}
 
           <h1
             id="page-hero-heading"
-            className={`${pill ? 'mt-5' : ''} text-[clamp(2.25rem,4.6vw,4rem)] font-light leading-[1.12] tracking-[-0.02em] text-[#F7F5F0]`}
+            className={`${pill ? 'mt-5' : ''} text-[clamp(1.85rem,4.6vw,4rem)] font-light leading-[1.12] tracking-[-0.02em] text-[#F7F5F0]`}
           >
             <span className="block overflow-hidden pb-[0.22em] -mb-[0.22em]">
               <motion.span
@@ -97,7 +97,7 @@ export function PageHero({
                 key={idx}
                 className={`${
                   Array.isArray(description) ? 'max-w-none' : 'max-w-[56ch]'
-                } text-justify text-base leading-[1.65] text-white/80 sm:text-[1.0625rem]`}
+                } text-left text-[0.9375rem] leading-[1.65] text-white/80 sm:text-justify sm:text-[1.0625rem]`}
               >
                 {line}
               </p>
@@ -105,18 +105,18 @@ export function PageHero({
           </div>
 
           {ctaLabel && ctaTo && (
-            <div className="mt-7 flex items-center">
+            <div className="mt-6 flex items-center sm:mt-7">
               {ctaTo.startsWith('#') ? (
                 <a
                   href={ctaTo}
-                  className="group inline-flex items-center gap-2 active:scale-[0.98]"
+                  className="group inline-flex max-w-full items-center gap-2 active:scale-[0.98]"
                 >
-                  <span className="inline-flex h-[48px] items-center rounded-full bg-accent px-6 text-[0.9375rem] font-medium text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep">
+                  <span className="inline-flex h-11 items-center rounded-full bg-accent px-5 text-[0.875rem] font-medium text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep sm:h-[48px] sm:px-6 sm:text-[0.9375rem]">
                     {ctaLabel}
                   </span>
                   <span
                     aria-hidden="true"
-                    className="inline-flex h-[48px] w-[48px] items-center justify-center rounded-full bg-accent text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep sm:h-[48px] sm:w-[48px]"
                   >
                     <ArrowUpRight
                       className="h-5 w-5 transition-transform duration-300 ease-argo group-hover:rotate-45"
@@ -127,14 +127,14 @@ export function PageHero({
               ) : (
                 <Link
                   to={ctaTo}
-                  className="group inline-flex items-center gap-2 active:scale-[0.98]"
+                  className="group inline-flex max-w-full items-center gap-2 active:scale-[0.98]"
                 >
-                  <span className="inline-flex h-[48px] items-center rounded-full bg-accent px-6 text-[0.9375rem] font-medium text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep">
+                  <span className="inline-flex h-11 items-center rounded-full bg-accent px-5 text-[0.875rem] font-medium text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep sm:h-[48px] sm:px-6 sm:text-[0.9375rem]">
                     {ctaLabel}
                   </span>
                   <span
                     aria-hidden="true"
-                    className="inline-flex h-[48px] w-[48px] items-center justify-center rounded-full bg-accent text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep sm:h-[48px] sm:w-[48px]"
                   >
                     <ArrowUpRight
                       className="h-5 w-5 transition-transform duration-300 ease-argo group-hover:rotate-45"

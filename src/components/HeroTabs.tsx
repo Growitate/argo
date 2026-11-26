@@ -62,7 +62,7 @@ export function HeroTabs({
             tabIndex={isActive ? 0 : -1}
             onClick={() => onSelect(idx)}
             onKeyDown={(e) => handleKeyDown(e, idx)}
-            className={`relative flex h-14 min-w-[70%] shrink-0 snap-start items-center justify-center overflow-hidden rounded-[20px] px-5 text-center text-[0.75rem] font-medium uppercase tracking-[0.06em] transition-all duration-300 ease-argo md:min-w-0 md:text-[0.8125rem] ${
+            className={`relative flex h-12 min-w-[66%] shrink-0 snap-start items-center justify-center overflow-hidden rounded-2xl px-4 text-center text-[0.72rem] font-medium uppercase tracking-[0.05em] transition-all duration-300 ease-argo sm:min-w-[44%] md:h-14 md:min-w-0 md:rounded-[20px] md:px-4 md:text-[0.75rem] lg:px-5 lg:text-[0.8125rem] ${
               isActive
                 ? 'bg-white text-ink shadow-sm'
                 : 'border border-white/15 bg-[var(--glass)] text-white/85 backdrop-blur-[14px] hover:bg-white/35 hover:text-white'

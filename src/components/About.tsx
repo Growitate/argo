@@ -24,14 +24,14 @@ export function About() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(183,229,44,0.14),transparent_52%)]"
       />
 
-      <div className="relative z-10 px-5 pb-12 pt-28 sm:px-8 md:px-12 md:pb-16 md:pt-36 lg:px-16 lg:pb-20">
+      <div className="relative z-10 px-5 pb-10 pt-24 sm:px-8 sm:pb-12 sm:pt-28 md:px-12 md:pb-16 md:pt-36 lg:px-16 lg:pb-20">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-7">
             <Pill variant="on-dark">{ABOUT_CONTENT.pill}</Pill>
 
             <h1
               id="about-heading"
-              className="mt-5 text-[clamp(2.25rem,4.6vw,4rem)] font-light leading-[1.12] tracking-[-0.02em] text-[#F7F5F0]"
+              className="mt-5 text-[clamp(1.85rem,4.6vw,4rem)] font-light leading-[1.12] tracking-[-0.02em] text-[#F7F5F0]"
             >
               <span className="block overflow-hidden pb-[0.22em] -mb-[0.22em]">
                 <motion.span
@@ -59,27 +59,23 @@ export function About() {
               </span>
             </h1>
 
-            <div className="mt-6 space-y-4 text-justify text-base leading-[1.65] text-white/80">
+            <div className="mt-5 space-y-4 text-left text-[0.9375rem] leading-[1.65] text-white/80 sm:mt-6 sm:text-justify sm:text-base">
               {ABOUT_CONTENT.paragraphs.map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
               ))}
             </div>
 
-            <p className="mt-5 border-l-2 border-accent pl-4 text-justify text-[1.0625rem] font-medium leading-[1.5] text-[#F7F5F0]">
-              {ABOUT_CONTENT.closingHighlight}
-            </p>
-
-            <div className="mt-7 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-7">
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 active:scale-[0.98]"
+                className="group inline-flex max-w-full items-center gap-2 active:scale-[0.98]"
               >
-                <span className="inline-flex h-[48px] items-center rounded-full bg-accent px-6 text-[0.9375rem] font-medium text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep">
+                <span className="inline-flex h-11 items-center rounded-full bg-accent px-5 text-[0.875rem] font-medium text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep sm:h-[48px] sm:px-6 sm:text-[0.9375rem]">
                   Speak With Our Partners
                 </span>
                 <span
                   aria-hidden="true"
-                  className="inline-flex h-[48px] w-[48px] items-center justify-center rounded-full bg-accent text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep"
+                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-on-accent transition-colors duration-200 ease-argo group-hover:bg-accent-deep sm:h-[48px] sm:w-[48px]"
                 >
                   <ArrowUpRight
                     className="h-5 w-5 transition-transform duration-300 ease-argo group-hover:rotate-45"
@@ -99,13 +95,6 @@ export function About() {
                   loading="eager"
                   className="h-full w-full object-cover object-center"
                 />
-              </div>
-
-              {/* Lime floating badge overlay */}
-              <div className="absolute bottom-4 left-4 right-4 sm:left-5 sm:right-auto sm:max-w-[290px]">
-                <div className="rounded-2xl bg-accent px-4 py-3 text-[0.875rem] font-medium leading-[1.35] text-on-accent shadow-card">
-                  {ABOUT_CONTENT.badgeText}
-                </div>
               </div>
             </div>
           </Reveal>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowUpRight,
   BookOpenCheck,
+  BriefcaseBusiness,
   Calculator,
   Check,
   FileSpreadsheet,
@@ -18,6 +19,7 @@ import { ARGO_EASE } from './Reveal';
 
 const ICON_MAP: Record<ServiceIconName, typeof Handshake> = {
   Handshake,
+  BriefcaseBusiness,
   PieChart,
   Landmark,
   BookOpenCheck,
@@ -111,10 +113,10 @@ export default function ServiceDrawer({
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: prefersReducedMotion ? 0 : '100%', opacity: prefersReducedMotion ? 0 : 1 }}
         transition={{ duration: prefersReducedMotion ? 0.2 : 0.4, ease: ARGO_EASE }}
-        className="relative z-10 flex h-full w-full max-w-lg flex-col justify-between overflow-y-auto bg-bg p-6 shadow-2xl sm:p-8"
+        className="relative z-10 flex h-full w-full max-w-lg flex-col justify-between overflow-y-auto bg-bg p-5 shadow-2xl sm:p-8"
       >
         <div>
-          <div className="flex items-start justify-between gap-4 border-b border-hairline pb-5">
+          <div className="flex items-start justify-between gap-4 border-b border-hairline pb-4 sm:pb-5">
             <div className="flex items-center gap-3.5">
               <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-ink">
                 <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
@@ -148,11 +150,11 @@ export default function ServiceDrawer({
             />
           </div>
 
-          <p className="mt-6 text-justify text-base leading-[1.65] text-ink-soft">
+          <p className="mt-5 text-left text-[0.9375rem] leading-[1.65] text-ink-soft sm:mt-6 sm:text-justify sm:text-base">
             {service.fullDescription}
           </p>
 
-          <div className="mt-7 rounded-card bg-surface p-6">
+          <div className="mt-6 rounded-card bg-surface p-5 sm:mt-7 sm:p-6">
             <h4 className="text-[0.75rem] font-medium uppercase tracking-[0.08em] text-ink">
               Key Deliverables
             </h4>
@@ -182,9 +184,6 @@ export default function ServiceDrawer({
               aria-hidden="true"
             />
           </button>
-          <p className="mt-3 text-center text-xs text-ink-soft">
-            Tailored to your business scale and direct partner scope.
-          </p>
         </div>
       </motion.aside>
     </div>

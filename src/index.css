@@ -4,13 +4,21 @@
 
 :root {
   --bg: #ffffff;
+  --bg-rgb: 255 255 255;
   --surface: #f6f4f1;
+  --surface-rgb: 246 244 241;
   --surface-2: #efece7;
+  --surface-2-rgb: 239 236 231;
   --ink: #12372e;
+  --ink-rgb: 18 55 46;
   --ink-soft: #4c6159;
+  --ink-soft-rgb: 76 97 89;
   --accent: #b7e52c;
+  --accent-rgb: 183 229 44;
   --accent-deep: #9cc51a;
+  --accent-deep-rgb: 156 197 26;
   --on-accent: #12372e;
+  --on-accent-rgb: 18 55 46;
   --hero-overlay: linear-gradient(
     90deg,
     rgba(10, 28, 22, 0.62) 0%,
@@ -26,6 +34,7 @@ html {
   font-family: 'Work Sans', Inter, system-ui, -apple-system, sans-serif;
   background-color: var(--bg);
   color: var(--ink);
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,7 +48,7 @@ body {
 
 section[id],
 footer[id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 76px;
 }
 
 /* Visible focus ring: 2px --ink outline with 2px lime halo offset */

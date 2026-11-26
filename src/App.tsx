@@ -33,8 +33,8 @@ export function App() {
           Skip to main content
         </a>
 
-        {/* Outer page frame: 12px mobile / 20px desktop gutter */}
-        <div className="mx-auto max-w-[1440px] px-3 pt-3 lg:px-5 lg:pt-5">
+        {/* Outer page frame: 10px mobile / 20px desktop gutter */}
+        <div className="mx-auto max-w-[1440px] px-2.5 py-2.5 sm:px-3 sm:py-3 lg:px-5 lg:py-5">
           <Suspense fallback={<div className="min-h-[70vh]" aria-busy="true" />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -49,16 +49,16 @@ export function App() {
           <Footer />
         </div>
 
-        {/* Persistent 56px lime WhatsApp FAB */}
+        {/* Persistent lime WhatsApp FAB */}
         <a
           href={SITE_META.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Message ArGo on WhatsApp"
           title="WhatsApp: +91 98220 49900"
-          className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-accent text-on-accent shadow-card transition-all duration-200 ease-argo hover:-translate-y-0.5 hover:bg-accent-deep active:scale-[0.98]"
+          className="fixed bottom-4 right-4 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent text-on-accent shadow-card transition-all duration-200 ease-argo hover:-translate-y-0.5 hover:bg-accent-deep active:scale-[0.98] sm:bottom-5 sm:right-5 sm:h-14 sm:w-14"
         >
-          <MessageCircle className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
+          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={1.75} aria-hidden="true" />
         </a>
       </div>
     </BrowserRouter>
