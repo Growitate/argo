@@ -228,7 +228,7 @@ export const BENTO_CARDS: BentoItem[] = [
   },
 ];
 
-export const BUSINESS_OVERVIEW = {
+export const BUSINESS_OVERVIEW = {  
   aboutBusiness: {
     heading: 'Integrated Solutions Across the CFO Office',
     paragraphs: [
@@ -292,11 +292,9 @@ export const SERVICES: ServiceItem[] = [
       'Negotiation and transaction support',
       'Post-merger integration and financial restructuring',
     ],
-    // REPLACE with client photography
-    image:
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=85',
+    image: '/images/M&A%204.jpg.jpeg',
     imageAlt:
-      'Advisory partners and executives collaborating on mergers and acquisitions deal strategy',
+      'Two paths merging into a single unified upward arrow representing mergers and acquisitions',
   },
   {
     id: 'handover-takeover',
@@ -551,9 +549,9 @@ export const ABOUT_CONTENT = {
     'We saw an opportunity to bridge this gap by building a professional services firm that brings quality work and meaningful career opportunities closer to home. Our vision was to establish our primary operational and delivery base in a Tier 2 city, while extending our presence to major business centres through a team positioned closer to our clients.',
     'This approach allows us to combine the advantages of a strong talent base in emerging cities with the accessibility, responsiveness and client proximity of a metropolitan presence. At ArGo, we believe that great talent is not confined by geography, and quality professional services need not be delivered exclusively from metropolitan centres. Our operating model reflects this belief — creating opportunities where talent exists, while serving businesses wherever they operate.',
   ],
-  image: '/WhatsApp%20Image%202026-11-26%20at%2010.50.09%20AM.jpeg',
+  image: '/images/Our%20story.jpg.jpeg',
   imageAlt:
-    'Two finance advisors collaborating over a laptop in a modern office meeting room',
+    'Two senior business advisors having a focused consultation across a modern office table',
 };
 
 export const WHY_ARGO_CONTENT = {

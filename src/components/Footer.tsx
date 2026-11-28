@@ -45,9 +45,20 @@ export function Footer() {
         </div>
 
         {/* Bottom legal bar */}
-        <div className="pt-4 pr-14 text-[0.8125rem] leading-relaxed text-white/65 sm:pr-0">
+        <div className="flex flex-col gap-1.5 pt-4 pr-14 text-[0.8125rem] leading-relaxed text-white/65 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:pr-16 xl:pr-0">
           <p>
             © {SITE_META.copyrightYear} {SITE_META.legalName}. All rights reserved.
+          </p>
+          <p className="text-white/70">
+            Built by{' '}
+            <a
+              href="https://growitate.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-accent transition-opacity hover:underline hover:opacity-90"
+            >
+              Growitate
+            </a>
           </p>
         </div>
       </div>

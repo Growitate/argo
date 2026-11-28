@@ -88,7 +88,7 @@ export function About() {
 
           <Reveal delay={0.12} className="lg:col-span-5">
             <div className="relative overflow-hidden rounded-card bg-white/10">
-              <div className="aspect-[4/4.3] w-full overflow-hidden">
+              <div className="aspect-video w-full overflow-hidden">
                 <img
                   src={ABOUT_CONTENT.image}
                   alt={ABOUT_CONTENT.imageAlt}

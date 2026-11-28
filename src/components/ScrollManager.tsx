@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ROUTE_TITLES: Record<string, string> = {
-  '/': 'ArGo | Your Business Partner',
-  '/about': 'About Us — Our Story, Partners & Values | ArGo',
-  '/services': 'Services, Sectors & Tools | ArGo',
-  '/careers': 'Careers in Emerging Cities | ArGo',
-  '/contact': 'Contact Us | ArGo',
+  '/': 'ArGo | Home',
+  '/about': 'ArGo | About Us',
+  '/services': 'ArGo | Services',
+  '/careers': 'ArGo | Careers',
+  '/contact': 'ArGo | Contact Us',
 };
 
 export function ScrollManager() {
