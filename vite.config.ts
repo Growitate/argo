@@ -7,12 +7,20 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 1202,
     strictPort: true,
-    allowedHosts: ['argo.cyberpunk.co.in'],
+    allowedHosts: [
+      'argo.cyberpunk.co.in',
+      'argoglobaladvisors.com',
+      'www.argoglobaladvisors.com',
+    ],
   },
   preview: {
     host: '0.0.0.0',
     port: 1202,
     strictPort: true,
-    allowedHosts: ['argo.cyberpunk.co.in'],
+    allowedHosts: [
+      'argo.cyberpunk.co.in',
+      'argoglobaladvisors.com',
+      'www.argoglobaladvisors.com',
+    ],
   },
 });

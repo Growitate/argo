@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve existing files and directories directly (robots.txt, sitemap.xml, assets, images)
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Fallback SPA routes (/about, /services, /careers, /contact) to index.html
+  RewriteRule . /index.html [L]
+</IfModule>

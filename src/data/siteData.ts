@@ -228,14 +228,14 @@ export const BENTO_CARDS: BentoItem[] = [
   },
 ];
 
-export const BUSINESS_OVERVIEW = {  
+export const BUSINESS_OVERVIEW = {
   aboutBusiness: {
     heading: 'Integrated Solutions Across the CFO Office',
     paragraphs: [
-      'ArGo is a professional services and consulting firm providing integrated solutions across the CFO Office.',
-      'We work with businesses to manage, strengthen and streamline their finance functions through a comprehensive range of services covering accounting, financial reporting, assurance, taxation, regulatory compliance, financial planning, MIS and business advisory.',
-      'Our approach goes beyond traditional compliance and transaction-based services. We work as an extended partner to the CFO Office, combining technical expertise with practical business understanding to support financial governance, operational efficiency, informed decision-making and business growth.',
-      'With our primary delivery capabilities based in Tier 2 cities and a presence in major business centres, we operate through a flexible model that brings together skilled talent, efficient execution and close client engagement.',
+      'ArGo Assurance & Advisory (A A G D & Associates LLP) is a partner-led Chartered Accountants and finance advisory firm providing integrated solutions across the CFO Office.',
+      'We work with businesses across Mumbai and India to manage, strengthen and streamline their finance functions through a comprehensive range of finance services covering accounting, financial reporting, assurance, audit & taxation, tax planning, regulatory compliance, financial planning, MIS, mergers and transaction advisory.',
+      'Our approach goes beyond traditional compliance and transaction-based services. We work as an extended advisor to the CFO Office, combining technical expertise with practical business understanding across infrastructure, manufacturing, and high-growth sectors to support financial governance, operational efficiency, informed decision-making and business growth.',
+      'With our primary delivery capabilities based in Tier 2 cities and a strong Chartered Accountants presence in Mumbai and major business centres, we operate through a flexible model that brings together skilled talent, efficient execution and close client engagement.',
     ],
   },
   problemWeSolve: {
@@ -380,7 +380,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Taxation (Direct & Indirect Tax)',
     icon: 'Calculator',
     shortDescription:
-      'Income tax, GST compliance, representation in assessments and tax advisory.',
+      'Direct & indirect tax planning, Income Tax & GST compliance, audit tax representation and advisory.',
     fullDescription:
       'Comprehensive tax solutions designed to ensure regulatory compliance, optimise tax positions and minimise exposure to tax risks. We support businesses across the entire tax lifecycle, combining technical knowledge with practical insights to manage compliance, reporting, assessments and tax-related matters effectively.',
     deliverables: [
@@ -431,7 +431,8 @@ export const SECTORS: SectorItem[] = [
     icon: 'Building2',
     image:
       'https://images.unsplash.com/photo-1595006986810-5f41da30a9ec?auto=format&fit=crop&w=900&q=85',
-    imageAlt: 'Modern commercial skyscrapers and urban infrastructure skyline',
+    imageAlt:
+      'Modern commercial skyscrapers and urban infrastructure projects served by ArGo finance and tax advisors',
   },
   {
     id: 'consumer-distribution',
@@ -609,7 +610,8 @@ export const PARTNERS: PartnerItem[] = [
       'At ArGo, Arpit brings together his experience across diverse industries and complex financial environments to help businesses strengthen financial governance, enhance reporting quality, manage regulatory requirements and establish robust financial processes. He believes in combining technical rigour with practical business understanding to deliver meaningful outcomes for clients.',
     ],
     image: '/images/WhatsApp%20Image%202026-11-25%20at%209.11.50%20AM.jpeg',
-    imageAlt: 'Portrait of Arpit Agrawal, Partner at ArGo',
+    imageAlt:
+      'Portrait of CA Arpit Agrawal, Chartered Accountant and Partner at ArGo Assurance & Advisory (AAGD & Associates LLP), Mumbai',
     isPlaceholder: false,
   },
   {
@@ -627,21 +629,21 @@ export const PARTNERS: PartnerItem[] = [
       'At ArGo, Gopesh brings this combination of financial and technological understanding to help businesses build stronger finance functions, improve financial visibility and make informed business decisions. He is particularly focused on bridging the gap between financial information, business strategy and effective execution.',
     ],
     image: '/Gopesh%20Dawda%20Profile%20pic%20(1).png',
-    imageAlt: 'Portrait of Gopesh Dawda, Partner at ArGo',
+    imageAlt:
+      'Portrait of CA Gopesh Dawda, Chartered Accountant and Partner at ArGo Assurance & Advisory (AAGD & Associates LLP), Mumbai',
     imagePositionClass: 'object-center',
     isPlaceholder: false,
   },
 ];
 
-// PLACEHOLDER CONSTANTS: replace cityPlaceholder names with exact Tier 2 and Metro offices from client PPT.
 export const LOCATIONS: LocationPin[] = [
   {
     id: 'tier-2-base',
     type: 'primary-base',
     label: 'Primary Delivery Base',
-    cityPlaceholder: 'Tier 2 Delivery Hub [City Placeholder]',
+    cityPlaceholder: 'Kolhapur — Shahu Market Yard',
     description:
-      'Primary operational and delivery centre nurturing skilled Chartered Accountancy and finance talent in an emerging city.',
+      'Primary operational and delivery centre nurturing skilled Chartered Accountancy and finance talent in Kolhapur, Maharashtra.',
     x: 215,
     y: 265,
   },
@@ -649,9 +651,9 @@ export const LOCATIONS: LocationPin[] = [
     id: 'mumbai-metro',
     type: 'metro-presence',
     label: 'Metro Client Presence',
-    cityPlaceholder: 'Mumbai & Western Corridor [Office Placeholder]',
+    cityPlaceholder: 'Mumbai — Vile Parle (E)',
     description:
-      'Client-facing presence grounded in years of Mumbai metropolitan practice for close engagement and responsiveness.',
+      'Client-facing Chartered Accountants office in Vile Parle East, Mumbai for close engagement, tax advisory and responsiveness.',
     x: 132,
     y: 332,
   },
@@ -659,7 +661,7 @@ export const LOCATIONS: LocationPin[] = [
     id: 'major-business-centres',
     type: 'metro-presence',
     label: 'Major Business Centres',
-    cityPlaceholder: 'Major Business Centres [Cities Placeholder]',
+    cityPlaceholder: 'Pan-India Business Centres',
     description:
       'Flexible client engagement teams positioned closer to businesses across India’s commercial hubs.',
     x: 196,

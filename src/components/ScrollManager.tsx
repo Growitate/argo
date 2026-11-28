@@ -1,19 +1,47 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { DEFAULT_OG_IMAGE, ROUTE_SEO, SITE_URL } from '../data/seoConfig';
 
-const ROUTE_TITLES: Record<string, string> = {
-  '/': 'ArGo | Home',
-  '/about': 'ArGo | About Us',
-  '/services': 'ArGo | Services',
-  '/careers': 'ArGo | Careers',
-  '/contact': 'ArGo | Contact Us',
-};
+function upsertMeta(attr: 'name' | 'property', key: string, content: string) {
+  let tag = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute(attr, key);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute('content', content);
+}
+
+function upsertCanonical(href: string) {
+  let link = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    document.head.appendChild(link);
+  }
+  link.setAttribute('href', href);
+}
 
 export function ScrollManager() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    document.title = ROUTE_TITLES[pathname] ?? ROUTE_TITLES['/'];
+    const seo = ROUTE_SEO[pathname] ?? ROUTE_SEO['/'];
+    const canonicalUrl = `${SITE_URL}${seo.canonicalPath}`;
+
+    document.title = seo.title;
+    upsertMeta('name', 'description', seo.description);
+    upsertMeta('name', 'keywords', seo.keywords);
+    upsertCanonical(canonicalUrl);
+
+    upsertMeta('property', 'og:url', canonicalUrl);
+    upsertMeta('property', 'og:title', seo.ogTitle);
+    upsertMeta('property', 'og:description', seo.description);
+    upsertMeta('property', 'og:image', DEFAULT_OG_IMAGE);
+
+    upsertMeta('name', 'twitter:title', seo.ogTitle);
+    upsertMeta('name', 'twitter:description', seo.description);
+    upsertMeta('name', 'twitter:image', DEFAULT_OG_IMAGE);
 
     if (hash) {
       window.scrollTo({ top: 0, behavior: 'auto' });

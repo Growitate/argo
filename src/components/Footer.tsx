@@ -47,7 +47,7 @@ export function Footer() {
         {/* Bottom legal bar */}
         <div className="flex flex-col gap-1.5 pt-4 pr-14 text-[0.8125rem] leading-relaxed text-white/65 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:pr-16 xl:pr-0">
           <p>
-            © {SITE_META.copyrightYear} {SITE_META.legalName}. All rights reserved.
+            © {SITE_META.copyrightYear} {SITE_META.legalName} (ArGo Assurance &amp; Advisory) · Mumbai &amp; Kolhapur. All rights reserved.
           </p>
           <p className="text-white/70">
             Built by{' '}
